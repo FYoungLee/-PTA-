@@ -30,6 +30,7 @@
 //6 2
 //1 2 3 4 5 6
 //输出样例:
+//5 6 1 2 3 4
 
 #include <iostream>
 using namespace std;
@@ -57,4 +58,4 @@ int main()
     return 0;
 }
 
-//5 6 1 2 3 4
+
