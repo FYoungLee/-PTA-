@@ -36,8 +36,10 @@ int main()
 {
     char ch;
     vector<int> vi;
-    while ((ch = getchar())!= '\n')
-        vi.push_back(atoi(&ch));
+    while ((ch = getchar())!= '\n') {
+        int i = ch - '0';
+        vi.push_back(i);
+    }
     auto vres = get_arr(vi);
     if (check(vi, vres))
         cout << "Yes\n";
@@ -67,6 +69,7 @@ vector<int> get_arr(const vector<int>& vi)
 }
 bool check(vector<int>& v1, vector<int>& v2)
 {
+    if (v1.size() != v2.size()) return false;
     for(auto it = v2.begin(); it != v2.end(); ++it) {
         auto adr = find(v1.begin(), v1.end(), *it);
         if (adr != v1.end())
@@ -75,3 +78,5 @@ bool check(vector<int>& v1, vector<int>& v2)
     if (v1.size() == 0) return true;
     else return false;
 }
+
+
