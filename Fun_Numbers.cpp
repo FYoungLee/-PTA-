@@ -72,11 +72,10 @@ bool check(vector<int>& v1, vector<int>& v2)
     if (v1.size() != v2.size()) return false;
     for(auto it = v2.begin(); it != v2.end(); ++it) {
         auto adr = find(v1.begin(), v1.end(), *it);
-        if (adr != v1.end())
-            v1.erase(adr);
+        if (adr != v1.end()) v1.erase(adr);
+        else return false;
     }
-    if (v1.size() == 0) return true;
-    else return false;
+    return true;
 }
 
 
