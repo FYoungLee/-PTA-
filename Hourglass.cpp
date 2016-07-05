@@ -29,6 +29,63 @@
 //*****
 //2
 
+/* recursion */
+
+/*
+
+#include <iostream>
+using namespace std;
+
+void cal(int &, int &, int = 1);
+void printTop(int, char, int = 0);
+void printBottom(int, char, int = 0);
+
+int main()
+{
+    int n, i = 0;
+    char ch;
+    cin >> n >> ch;
+    cal(n, i);
+    printTop(i, ch);
+    for (int j = i; j--;)
+        cout << ' ';
+    cout << ch << "\n";
+    printBottom(i, ch);
+    cout << n << endl;
+    return 0;
+}
+
+void cal(int& m, int& i, int t) {
+    t += 2;
+    if (m > t * 2) {
+        m -= t * 2;
+        ++i;
+        cal(m, i, t);
+    } else --m;
+}
+
+void printTop(int i, char ch, int t) {
+    if (i) {
+        for (int j = t; j--;)
+            cout << " ";
+        for (int j = i * 2 + 1; j--;)
+            cout << ch;
+        cout << endl;
+        printTop(i - 1, ch, t + 1);
+    }
+}
+void printBottom(int i, char ch, int t) {
+    if (i) {
+        printBottom(i - 1, ch, t + 1);
+        for (int j = t; j--;)
+            cout << " ";
+        for (int j = i * 2 + 1; j--;)
+            cout << ch;
+        cout << endl;
+    }
+}
+*/
+
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -81,3 +138,5 @@ void Print(int n, char c)
     } else
         cout << c << endl << remain << endl;
 }
+
+
